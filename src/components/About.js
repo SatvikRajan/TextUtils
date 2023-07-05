@@ -18,6 +18,7 @@ export default function About(props) {
             </button>
           </h2>
           <div
+          style={{backgroundColor: props.mode==='dark'?'#212529':'white', color: props.mode==='dark'?'white':'black'}}
             id="collapseOne"
             className="accordion-collapse collapse show"
             data-bs-parent="#accordionExample"

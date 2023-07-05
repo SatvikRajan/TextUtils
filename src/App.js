@@ -1,18 +1,18 @@
 // import logo from './logo.svg';
 import { useState } from "react";
 import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 // import SigninLogin from "./components/SigninLogin";
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   // Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
@@ -40,7 +40,7 @@ function App() {
   }
   return (
     <>
-    {/* <Router> */}
+      <Router>
         <Navbar
           title="TextUtils"
           aboutText="About Text Utils"
@@ -50,19 +50,16 @@ function App() {
         <Alert alert={alert}>
         </Alert>
         <div className="container my-3">
-          {/* <Routes> */}
-            {/* <Route path="/about" */}
-            {/* <About/> */}
-            {/* </Route> */}
-             {/* <Route path="/" */}
-              <TextForm showAlert={showAlert} heading="Enter Your Text Here" mode={mode} />
-            {/* </Route> */}
-            {/* <Route path="/signin" */}
-              {/* <SigninLogin/> */}
-            {/* </Route> */}
-          {/* </Routes> */}
+          <Routes>
+            <Route path="/about"
+              element={<About mode={mode}/>}>
+            </Route>
+            <Route path="/" 
+              element= {<TextForm showAlert={showAlert} heading="Enter Your Text Here" mode={mode}/>} >
+            </Route>
+          </Routes>
         </div>
-        {/* </Router> */}
+      </Router>
     </>
   );
 }

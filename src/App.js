@@ -55,7 +55,7 @@ function App() {
               element={<About mode={mode}/>}>
             </Route>
             <Route path="/" 
-              element= {<TextForm showAlert={showAlert} heading="Enter Your Text Here" mode={mode}/>} >
+              element= {<TextForm showAlert={showAlert} heading="TextUtils - Word Counter, Character counter, Remove Extra Spaces" mode={mode}/>} >
             </Route>
           </Routes>
         </div>

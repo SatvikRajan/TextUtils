@@ -39,10 +39,10 @@ export default function TextForm(props) {
   return (
     <>
     <div className="container"></div>
-      <div className="mb-1  p-3 border border-dark rounded">
+      <div className="mb-1 p-3 border border-dark rounded">
         <h1 style={{color: props.mode==='dark'?'white':'black'}}>{props.heading} </h1>
         <textarea
-          style={{backgroundColor: props.mode==='dark'?'#212529':'white', color: props.mode==='dark'?'white':'black'}}
+          style={{backgroundColor: props.mode==='dark'?'#212529':'white', color: props.mode==='dark'?'white':'black', margin: "20px 0px"}}
           className="form-control"
           id="exampleFormControlTextarea1"
           rows="8"
@@ -54,7 +54,7 @@ export default function TextForm(props) {
         <button disabled={text.length===0} className="btn btn-primary my-1 mx-1" onClick={clearText}>Clear Text</button>
         <button disabled={text.length===0} className="btn btn-primary my-1 mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
         <button disabled={text.length===0} className="btn btn-primary my-1 mx-1" onClick={handleCopy}>Copy Text</button>
-      <div className="container" style={{backgroundColor: props.mode==='dark'?'#212529':'white', color: props.mode==='dark'?'white':'black'}}>
+      <div className="container" style={{backgroundColor: props.mode==='dark'?'#212529':'white', color: props.mode==='dark'?'white':'black', margin: "10px 0px"}}>
         <h2>Your Text Summary</h2>
         <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words, {text.length} characters</p>
         <p>{0.008 * text.split(" ").length} minutes read</p>
